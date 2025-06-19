@@ -8,10 +8,15 @@ export const revalidate = 0;
 const Search = async ({
   searchParams,
 }: {
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) => {
+  // Await the searchParams promise
+  const resolvedSearchParams = await searchParams;
+
   const title =
-    typeof searchParams.title === "string" ? searchParams.title : "";
+    typeof resolvedSearchParams.title === "string"
+      ? resolvedSearchParams.title
+      : "";
   const songs = await getSongsByTitle(title);
 
   return (
