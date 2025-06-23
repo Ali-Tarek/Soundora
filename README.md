@@ -6,6 +6,8 @@ A modern, full-stack music streaming web app inspired by Spotify. Built with Nex
 
 ## Demo
 
+https://github.com/user-attachments/assets/5458792a-7f44-45a6-8f2d-e8271f454a9a
+
 ---
 
 ## Table of Contents
